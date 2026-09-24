@@ -1,7 +1,5 @@
 package server;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Deck deck = new Deck();
@@ -24,13 +22,9 @@ public class Main {
         hand1.addCards(deck.deal(5, State.FACE_DOWN));
         hand2.addCards(deck.deal(5, State.FACE_DOWN));
 
-        Player yui = new Player(1, hand1); // non-dealer - decides trump
-        Player amit = new Player(0, hand2); // dealer
+        Player p1 = new Player(1, hand1); // non-dealer - decides trump
+        Player p2 = new Player(0, hand2); // dealer
 
         System.out.println(deck.getSize());
-
-
-
-
     }
 }
